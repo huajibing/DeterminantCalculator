@@ -20,7 +20,7 @@ with open(filePath, 'r') as file:
 print('Complete!')
 
 # 格式化数字
-print('Transforming items...')
+print('Transforming elements...')
 for lt2 in range(mtxSize):
     for lt3 in range(mtxSize):
         if acr:
