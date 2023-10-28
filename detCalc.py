@@ -33,6 +33,8 @@ print('Complete!')
 # 行交换
 def row_exchange(col):
     nzrow = []
+    zrow = 0
+    zmat = []
     ext = 0
     for lt4 in range(mtxSize - col + 1):
         if mtx[col - 1 + lt4][col - 1] != 0:
@@ -40,8 +42,12 @@ def row_exchange(col):
             for lt5 in range(lt4):
                 if mtx[col - 1 + lt5][col - 1] == 0:
                     ext += 1
-    for lt6 in range(len(nzrow)):
-        mtx[col - 1 + lt6], mtx[nzrow[lt6]] = mtx[nzrow[lt6]], mtx[col - 1 + lt6]
+        else:
+            zmat.append(mtx[col - 1 + lt4])
+            zrow += 1
+    for lt6 in range(zrow):
+        mtx.remove(zmat[lt6])
+    mtx.extend(zmat)
     return ext
 
 
@@ -65,9 +71,11 @@ for lt9 in range(mtxSize - 1):
     if pause:
         determinant = 0
         break
+print(totalExt)
 determinant *= (-1) ** totalExt
 for lt10 in range(mtxSize):
     determinant *= mtx[lt10][lt10]
+print(mtx)
 print('Done.')
 print(f'\nDeterminant:{determinant}')
 if acr:
