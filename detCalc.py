@@ -48,13 +48,13 @@ def row_exchange(col):
 # 行倍加
 def row_replace(col):
     if mtx[col - 1][col - 1] == 0:
-        return 0
+        return 1
     else:
         for lt7 in range(mtxSize - col):
             mtn = mtx[col + lt7][col - 1] / mtx[col - 1][col - 1]
             for lt8 in range(mtxSize - col + 1):
                 mtx[col + lt7][col - 1 + lt8] -= mtx[col - 1][col - 1 + lt8] * mtn
-        return 1
+        return 0
 
 
 # 计算行列式
