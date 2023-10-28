@@ -26,7 +26,7 @@ for lt2 in range(mtxSize):
         if acr:
             mtx[lt2][lt3] = Fraction(mtx[lt2][lt3])
         else:
-            mtx[lt2][lt3] = float(mtx[lt2][lt3])
+            mtx[lt2][lt3] = float(Fraction(mtx[lt2][lt3]))
 print('Complete!')
 
 
