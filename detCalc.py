@@ -61,8 +61,8 @@ def row_replace(col):
 print('Calculating...')
 for lt9 in range(mtxSize - 1):
     totalExt += row_exchange(lt9 + 1)
-    palse = row_replace(lt9 + 1)
-    if palse:
+    pause = row_replace(lt9 + 1)
+    if pause:
         determinant = 0
         break
 determinant *= (-1) ** totalExt
