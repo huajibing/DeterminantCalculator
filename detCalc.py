@@ -71,11 +71,9 @@ for lt9 in range(mtxSize - 1):
     if pause:
         determinant = 0
         break
-print(totalExt)
 determinant *= (-1) ** totalExt
 for lt10 in range(mtxSize):
     determinant *= mtx[lt10][lt10]
-print(mtx)
 print('Done.')
 print(f'\nDeterminant:{determinant}')
 if acr:
